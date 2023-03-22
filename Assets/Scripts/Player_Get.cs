@@ -7,7 +7,7 @@ public class Player_Get : MonoBehaviour
     public Sound_Player _SP;
     public Player_Move _PM;
     public int Get_Coin_Count;
-    public Game_Manager _gm;
+    private Game_Manager _gm;
 
 
     // Start is called before the first frame update

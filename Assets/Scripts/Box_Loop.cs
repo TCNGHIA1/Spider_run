@@ -30,7 +30,7 @@ public class Box_Loop : MonoBehaviour
         //ngau nhien vi tri
         int a = Random.Range(0, 5);
         //tao chuong ngai A;
-        A_Zone = Instantiate(Box[a], new Vector3(30, -3, 0), transform.rotation) as GameObject;
+        A_Zone = Instantiate(Box[a], new Vector3(30, -7, 20.5f), transform.rotation) as GameObject;
     }
 
     public void MOVE()

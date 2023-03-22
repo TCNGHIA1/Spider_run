@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class Game_Manager : MonoBehaviour
 {
-    private int GameLV;
+    public int GameLV;
     public float GameSpeed;
     public Box_Loop _BL;
     public Scroll_Mapping _SM;
@@ -87,7 +87,7 @@ public class Game_Manager : MonoBehaviour
         {
             GameLevelUp();
         }
-        if (getMoney >= 200 && GameLV == 4)
+        if (getMoney >= 200 && GameLV == 5)
         {
             GameComplete();
         }

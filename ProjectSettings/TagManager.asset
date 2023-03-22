@@ -6,6 +6,7 @@ TagManager:
   tags:
   - coin
   - DeathZone
+  - Obstacle
   layers:
   - Default
   - TransparentFX
