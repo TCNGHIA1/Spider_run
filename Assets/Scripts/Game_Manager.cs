@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,21 +14,24 @@ public class Game_Manager : MonoBehaviour
     public Box_Loop _BL;
     public Scroll_Mapping _SM;
     public GameObject Player;
+    public Bullet_Move _BM;
 
 
     private float meter;
     private int getMoney = 0;
+    public int countBettery = 4;
 
     //
     public GameObject gameOver;
     public GameObject gameComplete;
     public GameObject Pause;
+    public Image bettery;
 
     //text get value gold and meter
     public TMP_Text[] gold_Label;
     public TMP_Text[] meter_label;
 
-   
+    public Sprite[] betterys;
 
     void Start()
     {
@@ -56,14 +59,13 @@ public class Game_Manager : MonoBehaviour
         GameSpeed += 3;
         _SM.ScrollSpeed += 0.1f;
         _BL.Speed = GameSpeed;
+        _BM.BulletSpeed += 0.5f;
     }
 
     public void GAMEOVER()
     {
         Time.timeScale = 0;
         gameOver.SetActive(true);
-
-
     }
     //get coin
     public void GETCOIN()
@@ -92,6 +94,41 @@ public class Game_Manager : MonoBehaviour
             GameComplete();
         }
     }
+    //sự kiện xảy ra khi chạm bettery hoặc bullet
+    public void GETBETTERY()
+    {
+        if(countBettery > 4)
+        {
+            countBettery = 4;
+        }
+            if (countBettery == 0)
+            {
+                bettery.overrideSprite = betterys[0];
+                GAMEOVER();
+            }
+            else if (countBettery == 1)
+            {
+                bettery.overrideSprite = betterys[1];
+            }
+            else if (countBettery == 2)
+            {
+                bettery.overrideSprite = betterys[2];
+            }
+            else if (countBettery == 3)
+            {
+                bettery.overrideSprite = betterys[3];
+            }
+            else if (countBettery == 4)
+            {
+                bettery.overrideSprite = betterys[4];
+            }
+
+        
+
+
+
+    }
+
     void GameComplete()
     {
         gameComplete.SetActive(true);

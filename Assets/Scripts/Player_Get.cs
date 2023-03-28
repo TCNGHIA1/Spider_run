@@ -9,7 +9,6 @@ public class Player_Get : MonoBehaviour
     public int Get_Coin_Count;
     private Game_Manager _gm;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +48,31 @@ public class Player_Get : MonoBehaviour
                     _SP.SoundPlay(2);
                 }
             }
-
+        }
+        if (other.CompareTag("bullet"))
+        {
+            Destroy(other.gameObject);
+            if (_gm != null)
+            {
+                _gm.countBettery--;
+                _gm.GETBETTERY();
+            }
+            if (_SP != null)
+            {
+                _SP.SoundPlay(3);
+            }
+        }
+        if (other.CompareTag("bettery"))
+        {
+            if (_gm != null)
+            {
+                _gm.countBettery++;
+                _gm.GETBETTERY();
+            }
+            if (_SP != null)
+            {
+                _SP.SoundPlay(4);
+            }
         }
     }
 }

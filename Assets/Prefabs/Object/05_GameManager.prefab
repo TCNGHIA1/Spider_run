@@ -55,6 +55,7 @@ MonoBehaviour:
   gameOver: {fileID: 0}
   gameComplete: {fileID: 0}
   Pause: {fileID: 0}
+  bettery: {fileID: 0}
   gold_Label:
   - {fileID: 0}
   - {fileID: 0}
@@ -63,6 +64,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  betterys:
+  - {fileID: 21300000, guid: edffba12f5659864886857c297cb571d, type: 3}
+  - {fileID: 21300000, guid: c6f0ac5d26de18149b6f15c4ef1ef581, type: 3}
+  - {fileID: 21300000, guid: fbe0a6637efa45448a3976b170df5d2f, type: 3}
+  - {fileID: 21300000, guid: 3bbfa4d9b555d8a43b25ecce064f01a9, type: 3}
+  - {fileID: 21300000, guid: 1b06fc016b803fc409baf1e210f5a8f6, type: 3}
 --- !u!82 &3443564087014515782
 AudioSource:
   m_ObjectHideFlags: 0

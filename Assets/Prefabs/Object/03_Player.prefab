@@ -49,6 +49,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 407a27cf6b81ca24ebfb1a7be66999ff, type: 3}
   - {fileID: 8300000, guid: af9bee2e8ed70644886f2d39c1c89426, type: 3}
   - {fileID: 8300000, guid: 7b2d31b4ddbcdb0468ef68d08505191e, type: 3}
+  - {fileID: 8300000, guid: 90097a0411d2c624e840aee003a4d71a, type: 3}
+  - {fileID: 8300000, guid: e8c4c14a5eae4924cb9ebbb22fbcadd7, type: 3}
 --- !u!82 &636936292401157812
 AudioSource:
   m_ObjectHideFlags: 0
@@ -177,7 +179,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6513156002888398861}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25, y: 2.1, z: 21.5}
+  m_LocalPosition: {x: -15, y: 2.1, z: 21.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

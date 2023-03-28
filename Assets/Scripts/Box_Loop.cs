@@ -13,6 +13,7 @@ public class Box_Loop : MonoBehaviour
     public GameObject B_Zone;
 
     public float Speed = 5f;
+    public float heightOffset = 0f;
     void Start()
     {
         
@@ -27,10 +28,12 @@ public class Box_Loop : MonoBehaviour
     public void MAKE()
     {
         B_Zone = A_Zone;
-        //ngau nhien vi tri
+        //ngau nhien vat can
         int a = Random.Range(0, 5);
+        //ngau nhien do cao hien thi
+        float b  = Random.Range(transform.position.y-heightOffset,transform.position.y+heightOffset);
         //tao chuong ngai A;
-        A_Zone = Instantiate(Box[a], new Vector3(30, -7, 20.5f), transform.rotation) as GameObject;
+        A_Zone = Instantiate(Box[a], new Vector3(30, b, 20.5f), transform.rotation) as GameObject;
     }
 
     public void MOVE()
