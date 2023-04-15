@@ -14,7 +14,10 @@ public class Game_Manager : MonoBehaviour
     public Box_Loop _BL;
     public Scroll_Mapping _SM;
     public GameObject Player;
-    public Bullet_Move _BM;
+    public AudioSource MainSound;
+
+    public AudioClip[] audioClips;
+
 
 
     private float meter;
@@ -59,13 +62,13 @@ public class Game_Manager : MonoBehaviour
         GameSpeed += 3;
         _SM.ScrollSpeed += 0.1f;
         _BL.Speed = GameSpeed;
-        _BM.BulletSpeed += 0.5f;
     }
 
     public void GAMEOVER()
     {
         Time.timeScale = 0;
         gameOver.SetActive(true);
+        MainSound.Stop();
     }
     //get coin
     public void GETCOIN()
@@ -122,11 +125,6 @@ public class Game_Manager : MonoBehaviour
             {
                 bettery.overrideSprite = betterys[4];
             }
-
-        
-
-
-
     }
 
     void GameComplete()
@@ -134,9 +132,9 @@ public class Game_Manager : MonoBehaviour
         gameComplete.SetActive(true);
         Player.SetActive(false);
         Time.timeScale = 0;
+        MainSound.Stop();
+        SoundPlay(0);
     }
-
-
     public void PauseGame(bool check) 
     {
         if (check)
@@ -149,5 +147,9 @@ public class Game_Manager : MonoBehaviour
             Time.timeScale = 1;
             Pause.SetActive(check);
         }
+    }
+    public void SoundPlay(int SoundNumber)
+    {
+        GetComponent<AudioSource>().PlayOneShot(audioClips[SoundNumber]);
     }
 }
